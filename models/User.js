@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("../dbs/connection");
 const bycrypt = require("bcrypt");
 
 const UserSchema = new mongoose.Schema({

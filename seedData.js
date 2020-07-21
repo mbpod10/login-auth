@@ -28,6 +28,7 @@ const userInput = {
   username: "mbpod20",
   password: "1234567",
   role: "admin",
+  //   todos: [(name: "Take out the garbage!")],
 };
 
 const user = new User(userInput);
