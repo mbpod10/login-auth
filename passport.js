@@ -36,7 +36,7 @@ passport.use(
 // authentication local strategy using username and password
 passport.use(
   new LocalStrategy((username, password, done) => {
-    User.findOne({ username }, (err, user) => {
+    User.findOne({ username }, (error, user) => {
       // database broken
       if (error) {
         return done(error);
