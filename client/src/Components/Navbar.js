@@ -12,14 +12,14 @@ const Navbar = (props) => {
 
   //setIsAuthenticated(false);
 
-  const onClickLogoutHandler = () => {
-    AuthService.logout().then((data) => {
-      if (data.success) {
-        setUser(data.user);
-        setIsAuthenticated(false);
-      }
-    });
-  };
+  //   const onClickLogoutHandler = () => {
+  //     AuthService.logout().then((data) => {
+  //       if (data.success) {
+  //         setUser(data.user);
+  //         setIsAuthenticated(false);
+  //       }
+  //     });
+  //   };
 
   const unauthenticatedNavBar = () => {
     return (
@@ -51,9 +51,9 @@ const Navbar = (props) => {
             <li> Admin</li>
           </Link>
         ) : null}
-        <button type="button" className="" onClick={onClickLogoutHandler}>
+        {/* <button type="button" onClick={onClickLogoutHandler}>
           Logout
-        </button>
+        </button> */}
       </>
     );
   };

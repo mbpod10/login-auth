@@ -6,6 +6,7 @@ import { Switch } from "react-router-dom";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
 // import AuthProvider from "./Context/AuthContext";
+import Register from "./Components/Register";
 
 function App() {
   const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(
@@ -18,6 +19,7 @@ function App() {
         <NavBar />
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
       </Router>
     </>
   );

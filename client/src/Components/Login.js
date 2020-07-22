@@ -9,7 +9,6 @@ const Login = (props) => {
   const authContext = useContext(AuthContext);
 
   const onChange = (event) => {
-    event.preventDefault();
     setUser({ ...user, [event.target.name]: event.target.value });
     console.log(user);
   };
