@@ -4,6 +4,7 @@ const JwtStrategy = require("passport-jwt").Strategy;
 const User = require("./models/User");
 
 const cookieExtractor = (req) => {
+  console.log(req);
   let token = null;
   if (req && req.cookies) {
     token = req.cookies["access_token"];
@@ -19,6 +20,7 @@ passport.use(
       secretOrKey: "Eatry",
     },
     (payload, done) => {
+      console.log("payload", payload);
       User.findById({ _id: payload.sub }, (error, user) => {
         if (error) {
           return done(error, false);
