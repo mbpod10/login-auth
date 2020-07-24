@@ -1,7 +1,7 @@
 import axios from "axios";
 export default {
   login: (user) => {
-    return fetch(`http://localhost:5000/api/user/login`, {
+    return fetch(`/api/user/login`, {
       method: "post",
 
       body: JSON.stringify(user),

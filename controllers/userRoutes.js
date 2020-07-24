@@ -68,8 +68,8 @@ router.post(
       const { _id, username, role } = req.user;
       console.log(req.user);
       const token = signToken(_id);
-      res.json("access_token", token, { httpOnly: true, sameSite: false });
-      //res.status(200).json({ isAuthenticated: true, user: { username, role } });
+      res.cookie("access_token", token, { httpOnly: true, sameSite: false });
+      res.status(200).json({ isAuthenticated: true, user: { username, role } });
     }
   }
 );
